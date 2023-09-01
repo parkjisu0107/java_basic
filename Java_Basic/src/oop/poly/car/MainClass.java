@@ -47,6 +47,9 @@ public class MainClass {
 		
 		Car c = kim.buyCar("테슬라");
 		c.run();
+		Tesla myTesla = (Tesla) c;
+		myTesla.activeAutopilot();
+		
 	} 
 	
 }
