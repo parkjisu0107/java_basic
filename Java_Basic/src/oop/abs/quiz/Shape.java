@@ -11,7 +11,7 @@ package oop.abs.quiz;
      4. 도형 이름을 출력할 수 있는 메서드 getName()을 선언. (강제 x)
     */
 
-public class Shape {
+public abstract class Shape {
 
 	private String name;
 	
@@ -19,8 +19,14 @@ public class Shape {
 		this.name = name;
 	}
 	
+	public abstract double getArea();
 	
+	public String getName() {
+		return name;
+	}
 	
-	void getName() {}
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 }
