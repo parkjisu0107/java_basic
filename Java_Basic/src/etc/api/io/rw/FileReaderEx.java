@@ -3,6 +3,7 @@ package etc.api.io.rw;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class FileReaderEx {
 
@@ -22,8 +23,12 @@ public class FileReaderEx {
 			
 			// read() 메서드에 배열을 전달하지 않으면 한 글자씩 읽어들임.
 			// 배열을 전달하면 배열의 크기만큼 읽어들임.
+			
+			/* read() 메서드: 인자로 입력받는 arr에 파일의 데이터를 읽어 저장한다.
+			 				그리고 파일에서 읽은 문자의 개수를 리턴한다.     */
  			int result = fr.read(arr);
  			System.out.println("문자의 개수: " + result);
+// 			System.out.println(Arrays.toString(arr));
  			for(char c : arr) {
  				System.out.print(c);
  				if(c == 0) break;
